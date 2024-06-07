@@ -1,0 +1,26 @@
+// FadeInUp
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// CLASSES
+// Intersection observer
+.slide-into-view {
+  opacity: 0;
+  visibility: hidden;
+}
+// Animations
+.animate-fade-in-up {
+  animation-name: fadeInUp;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}

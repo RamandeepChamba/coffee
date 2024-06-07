@@ -1,0 +1,20 @@
+.u-ucase {
+  text-transform: uppercase;
+}
+.u-cap {
+  text-transform: capitalize;
+}
+.u-margin-bottom-big {
+  margin-bottom: $space-lg;
+}
+.u-margin-bottom-md {
+  margin-bottom: $space-md;
+}
+.u-margin-bottom-sm {
+  margin-bottom: $space-sm;
+}
+// padding
+.u-padding-x-normal {
+  padding-left: $section-padding-x !important;
+  padding-right: $section-padding-x !important;
+}

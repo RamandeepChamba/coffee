@@ -1,0 +1,56 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.2rem 1.4rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 0.2s ease;
+
+  &--filled {
+    background-color: $color-primary;
+    color: $color-black;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $color-primary;
+      color: $color-primary;
+    }
+  }
+  &--empty {
+    background-color: transparent;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+
+    &:hover,
+    &.active {
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      color: $color-white;
+    }
+
+    &--hover {
+      &--black {
+        &.active {
+          background-color: $color-primary;
+          color: $color-black;
+        }
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+    &--white {
+      border: 1px solid $color-white;
+      color: $color-white;
+    }
+  }
+  &--white {
+    background-color: $color-white;
+    color: $color-black;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+}

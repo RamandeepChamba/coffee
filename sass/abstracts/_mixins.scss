@@ -1,0 +1,98 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-col-center {
+  @include flex-center;
+  flex-direction: column;
+}
+@mixin transform-center {
+  transform: translate(-50%, -50%);
+}
+@mixin absolute-transform-center {
+  top: 50%;
+  left: 50%;
+
+  @include transform-center;
+}
+@mixin hide-soft {
+  visibility: hidden;
+  opacity: 0;
+}
+@mixin unhide-soft {
+  visibility: visible;
+  opacity: 1;
+}
+@mixin bg-gradient-img(
+  $url,
+  $color-1: $color-black,
+  $color-2: $color-black,
+  $opacity: 0.75
+) {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-1, $opacity),
+      rgba($color-2, $opacity)
+    ),
+    url($url);
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}
+
+@mixin fixed-bg($imageName) {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/resources/imgs/#{$imageName}");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+// Padding 0
+@mixin pad-x-0 {
+  padding-left: 0;
+  padding-right: 0;
+}

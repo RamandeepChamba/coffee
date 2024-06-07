@@ -1,0 +1,31 @@
+.blog-preview {
+  &__meta {
+    display: flex;
+    color: $color-grey-lighter-1;
+    margin-top: $space-lg;
+    gap: $space-xs;
+    align-items: center;
+  }
+  &__date,
+  &__author,
+  &__comments-number {
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-grey-dark-1;
+    }
+  }
+  &__icon {
+    color: $color-white;
+    margin-right: $space-xxs;
+  }
+
+  .card__name {
+    margin-top: $space-sm;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

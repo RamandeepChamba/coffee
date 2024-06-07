@@ -1,0 +1,24 @@
+// STATS
+.section-stats {
+  @include fixed-bg("hero-3.jpg");
+
+  // List
+  .stats__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: $space-xl;
+  }
+
+  .stat__item {
+    flex: 0 0 20%;
+
+    @include respond(tab-port) {
+      flex: 0 0 50%;
+    }
+    @include respond(phone) {
+      flex: 0 0 100%;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+// Colors
+$color-primary: #c49b63;
+$color-primary-dark: #765d3b;
+$color-primary-light: #dcc3a1;
+
+$color-highlight: #ffd43b;
+
+$color-white: #fafafa;
+$color-black: #000;
+
+$color-grey-light-1: darken($color-white, 30%);
+$color-grey-lighter-1: darken($color-grey-light-1, 10%);
+$color-grey-light-2: darken($color-white, 20%);
+$color-grey-light-3: darken($color-white, 10%);
+$color-grey-dark-1: #7d7d7d;
+$color-grey-dark-2: #323232;
+$color-grey-dark-3: #1e1e1e;
+$color-grey-dark-4: #0a0a0a;
+// Space
+$container-max-width: 70rem;
+$container-md-max-width: 55rem;
+$container-sm-max-width: 40rem;
+
+$section-padding-x: 2rem;
+$section-padding-y-lg: 8rem;
+$section-padding-y-md: 6rem;
+$section-padding-y-sm: 4rem;
+// $home-hero-height: 80vh;
+$home-hero-height: 50rem;
+$navInitMaxHeight: 6rem;
+$navExpandMaxHeight: 38rem;
+
+$letter-spacing-p: 1.5px;
+
+// Border radius
+$border-radius-small: 3px;
+
+// Time
+$nav-expand-duration: 0.4s;

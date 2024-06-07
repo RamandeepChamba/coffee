@@ -1,0 +1,43 @@
+.feature {
+  text-align: center;
+  color: $color-grey-dark-2;
+
+  @include respond(tab-port) {
+    width: 70%;
+    align-self: center;
+  }
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    margin-right: $space-lg;
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      margin-bottom: $space-lg;
+    }
+  }
+
+  &__icon,
+  &__name {
+    color: $color-grey-dark-4;
+  }
+  &__icon {
+    display: inline-block;
+    font-size: $font-h2;
+    border: 1px solid $color-grey-dark-2;
+
+    padding: $space-md;
+  }
+  &__name {
+    font-size: $font-h6;
+    font-weight: 500;
+    margin-top: $space-lg;
+    margin-bottom: $space-md;
+  }
+  &__text {
+    font-size: $font-p;
+    line-height: 1.6;
+  }
+}

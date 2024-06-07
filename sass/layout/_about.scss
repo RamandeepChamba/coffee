@@ -1,0 +1,87 @@
+// About
+.section-about {
+  padding: 0;
+  display: flex;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+  .about {
+    &__side {
+      width: 50%;
+      padding: $section-padding-y-lg 0;
+      background-size: cover;
+      background-position: center;
+
+      @include respond(tab-land) {
+        padding: $section-padding-y-md 0;
+        background-size: cover;
+      }
+
+      @include respond(tab-port) {
+        width: 100%;
+        padding: 0;
+      }
+
+      &--left {
+        background-image: url("/resources/imgs/coffee-bar.jpg");
+
+        @include respond(tab-port) {
+          height: 20rem;
+        }
+      }
+    }
+    &__content {
+      background-color: rgba($color-black, 0.8);
+      color: $color-grey-dark-1;
+      padding: $space-xl $space-xl;
+      width: 80%;
+      border-radius: $border-radius-small;
+      opacity: 1;
+      transform: translateX(-15%);
+      transition: all 0.4s;
+
+      @include respond(tab-land) {
+        transform: translateX(-20%);
+        width: 90%;
+      }
+      @include respond(tab-port) {
+        width: 100%;
+        transform: translateX(0);
+        background-color: transparent;
+        // padding: $section-padding-x $space-lg;
+
+        opacity: 1;
+        transition: all 0.4s;
+      }
+
+      &.hidden {
+        transform: translateX(-15%) translateY(2rem);
+        opacity: 0;
+
+        @include respond(tab-land) {
+          transform: translateX(-20%) translateY(2rem);
+          opacity: 0;
+        }
+        @include respond(tab-port) {
+          transform: translateX(0) translateY(2rem);
+          opacity: 0;
+        }
+      }
+      .section-heading {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+        transition: all 0.4s 0.2s;
+      }
+      &.hidden .section-heading {
+        transform: translateY(2rem);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &__text {
+      line-height: 1.7;
+    }
+  }
+}

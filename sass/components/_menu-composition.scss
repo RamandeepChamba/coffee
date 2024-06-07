@@ -1,0 +1,32 @@
+.menu-composition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: $space-xl;
+
+  @include respond(tab-land) {
+    row-gap: $space-md;
+  }
+  @include respond(tab-port) {
+    margin-top: $space-md;
+    row-gap: $space-lg;
+  }
+
+  &__img {
+    width: 47%;
+    height: 12rem;
+    object-fit: cover;
+
+    &:nth-child(odd) {
+      transform: translateY(-1rem);
+
+      @include respond(tab-land) {
+        transform: translateY(0);
+      }
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

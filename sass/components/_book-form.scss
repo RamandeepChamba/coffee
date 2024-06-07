@@ -1,0 +1,104 @@
+.book-form {
+  &__heading {
+    font-size: $font-h5;
+    font-weight: 500;
+    margin-bottom: $space-md;
+    color: $color-white;
+  }
+  padding: $space-md;
+
+  &__input {
+    &:not(:last-child) {
+      margin-right: $space-md;
+    }
+  }
+  &__message {
+    margin-right: $space-md;
+  }
+
+  &__input,
+  &__message {
+    color: $color-white;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $color-primary-light;
+  }
+  &__input,
+  &__submit,
+  &__message {
+    flex-grow: 1;
+    padding: $space-sm 0;
+  }
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: $space-md;
+    }
+
+    &--1 {
+      input {
+        width: 50%;
+      }
+    }
+
+    &--2 {
+      input {
+        width: 33%;
+      }
+    }
+  }
+  &__submit {
+    border: none;
+    padding: $space-md $space-sm;
+    cursor: pointer;
+  }
+
+  // DARK FORM
+  &--dark {
+    .book-form {
+      &__input,
+      &__message {
+        border-bottom: 1px solid $color-grey-dark-2;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .book-form {
+    &__row {
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &--1 {
+        input {
+          width: 100%;
+        }
+      }
+      &--2 {
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    &__input,
+    &__message {
+      margin-bottom: $space-md;
+    }
+    &__input {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &__message {
+      margin-right: 0;
+    }
+  }
+}

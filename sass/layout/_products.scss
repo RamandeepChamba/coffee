@@ -1,0 +1,39 @@
+.section-products {
+  .card {
+    &__item--big.hidden {
+      display: none;
+    }
+  }
+
+  .product-type-tabs {
+    margin-top: $space-xxl;
+    margin-bottom: $space-xl;
+    text-align: center;
+
+    @include respond(phone) {
+      text-align: left;
+    }
+  }
+  .product-type-tab {
+    font-size: $font-h6;
+    padding: 1rem 1.2rem;
+
+    &:not(:last-child) {
+      margin-right: $space-xs;
+    }
+
+    &.btn--empty {
+      border: none;
+      border-bottom: 1px solid $color-primary;
+    }
+
+    @include respond(phone) {
+      text-align: left;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: $space-xxs;
+      }
+    }
+  }
+}

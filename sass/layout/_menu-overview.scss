@@ -1,0 +1,28 @@
+// MENU
+.section-menu-overview {
+  .menu {
+    &__container {
+      display: flex;
+      align-items: center;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+    }
+    &__content {
+      text-align: right;
+      margin-right: $space-xl;
+      flex: 0 0 50%;
+
+      @include respond(tab-port) {
+        flex: 0 0 100%;
+        text-align: left;
+        margin-right: 0;
+      }
+    }
+    &__text {
+      color: darken($color-grey-light-1, 10%);
+      line-height: 1.6;
+    }
+  }
+}

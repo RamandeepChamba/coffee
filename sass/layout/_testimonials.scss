@@ -1,0 +1,37 @@
+.section-testimonials {
+  @include fixed-bg("hero-1.jpg");
+
+  @include pad-x-0;
+
+  padding-bottom: 0;
+
+  .container {
+    padding: 0 $section-padding-x;
+  }
+
+  .testimonials {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+
+    @include respond(tab-land) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  li {
+    flex: 1;
+
+    .testimonial {
+      transition: all 0.4s;
+      &--dark {
+        background-color: lighten($color-primary-dark, 12%);
+      }
+    }
+    &:nth-child(even) .testimonial {
+      @include respond(tab-land) {
+        background-color: lighten($color-primary-dark, 12%);
+      }
+    }
+  }
+}

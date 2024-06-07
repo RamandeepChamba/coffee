@@ -1,0 +1,23 @@
+.card {
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-lg;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    flex: 1 0 18%;
+
+    @include respond(tab-port) {
+      flex: 1 0 34%;
+    }
+  }
+
+  &__item--big {
+    flex: 1 0 25%;
+  }
+}

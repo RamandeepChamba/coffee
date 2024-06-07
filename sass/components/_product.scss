@@ -1,0 +1,14 @@
+.product {
+  &__content {
+    text-align: center;
+  }
+
+  &__price {
+    color: $color-white;
+    margin-bottom: $space-md;
+    font-size: $font-h6;
+  }
+  &__cta {
+    padding: 0.5rem 0.8rem;
+  }
+}

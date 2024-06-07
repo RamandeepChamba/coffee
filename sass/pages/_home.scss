@@ -1,0 +1,80 @@
+// Hero
+.section-hero {
+  background-color: $color-black;
+  // min-height: 80vh;
+  // @include flex-col-center;
+  text-align: center;
+  color: $color-white;
+  padding: 0;
+
+  .hero {
+    &__container {
+      @include flex-col-center;
+    }
+    &__subheading {
+      font-size: $font-h3;
+      font-weight: 400;
+      margin-bottom: $space-sm;
+      color: $color-primary;
+    }
+    &__header {
+      width: 75%;
+    }
+    &__body,
+    &__cta {
+      width: 85%;
+    }
+    &__body {
+      margin: $space-lg 0;
+      font-size: $font-h6;
+      line-height: 1.5;
+      letter-spacing: $letter-spacing-p;
+      font-weight: 400;
+      color: $color-grey-light-3;
+    }
+    &__cta {
+      font-size: $font-sm;
+
+      .btn {
+        padding: $space-md $space-lg;
+      }
+    }
+  }
+  .carousal {
+    min-height: $home-hero-height;
+
+    &__item {
+      min-height: $home-hero-height;
+      background-color: $color-black;
+      background-size: cover;
+      @include flex-center;
+
+      &--1 {
+        @include bg-gradient-img("../../resources/imgs/hero-1.jpg");
+      }
+      &--2 {
+        @include bg-gradient-img("../../resources/imgs/hero-2.jpg");
+      }
+      &--3 {
+        @include bg-gradient-img("../../resources/imgs/hero-3.jpg");
+      }
+    }
+    &__dots {
+      margin-bottom: $space-xl;
+    }
+    &__dot {
+      width: 0.8rem;
+      height: 0.8rem;
+      outline: 2px solid $color-grey-dark-1;
+      outline-offset: 1px;
+
+      &:not(:last-child) {
+        margin-right: $space-sm;
+      }
+
+      &--active {
+        outline: 2px solid $color-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.carousal {
+  min-height: 80vh;
+  position: relative;
+
+  &__inner {
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 80vh;
+    transition: all 0.8s ease-in-out;
+
+    @include hide-soft;
+
+    &--1 {
+    }
+    &--2 {
+    }
+    &--3 {
+    }
+
+    &--active {
+      @include unhide-soft;
+    }
+  }
+  &__dots {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+    // background-color: orange;
+    // padding: 2rem 0;
+    transform: translateX(-50%);
+    margin-bottom: 4rem;
+  }
+  &__dot {
+    cursor: pointer;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-color: $color-grey-dark-1;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &--active {
+      background-color: $color-white;
+    }
+  }
+}

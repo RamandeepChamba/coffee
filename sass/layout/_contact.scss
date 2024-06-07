@@ -1,0 +1,86 @@
+.section-contact {
+  position: relative;
+  background-color: $color-black;
+  color: $color-white;
+  padding: $space-xl 0;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+
+  .book-form {
+    position: absolute;
+    width: 30%;
+    background-color: $color-primary;
+    bottom: 0;
+    right: 0;
+
+    @include respond(tab-port) {
+      position: static;
+      width: 100%;
+      padding: $space-xl 0;
+      // padding-left: $section-padding-x;
+      // padding-right: $section-padding-x;
+    }
+  }
+  .contact {
+    &__container {
+      display: flex;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+      }
+    }
+    &__info {
+      display: flex;
+      width: 60%;
+      // padding-left: $section-padding-x;
+      margin-left: $space-xxxl;
+
+      @include respond(tab-land) {
+        width: 70%;
+        margin-left: 1rem;
+      }
+      @include respond(tab-port) {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+        // padding-top: $space-xl;
+        margin-top: $space-xl;
+        margin-bottom: $space-xl;
+      }
+    }
+    &__item {
+      display: flex;
+      width: 33%;
+
+      @include respond(tab-port) {
+        display: flex;
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-right: $space-md;
+
+        @include respond(tab-port) {
+          margin-right: 0;
+          margin-bottom: $space-md;
+        }
+      }
+    }
+    &__icon {
+      margin-right: $space-md;
+      color: $color-primary;
+      padding-top: 2px;
+    }
+    &__heading {
+      font-size: $font-h6;
+      margin-bottom: $space-sm;
+      font-weight: 500;
+    }
+    &__content {
+      color: $color-grey-dark-1;
+      font-size: $font-p;
+    }
+  }
+}

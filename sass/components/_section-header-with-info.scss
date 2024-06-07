@@ -1,0 +1,16 @@
+.section-header-with-info {
+  text-align: center;
+
+  .section-info {
+    color: $color-grey-lighter-1;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: $space-lg;
+    margin-bottom: $space-xxl;
+    line-height: 1.7;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

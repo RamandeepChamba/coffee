@@ -1,0 +1,39 @@
+// CONTACT END
+.section-contact-end {
+  background-color: $color-black;
+
+  padding: 0;
+
+  .wrapper {
+    display: flex;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  .side {
+    flex: 1 0 50%;
+
+    &--left {
+      background-image: url("../../resources/imgs/hero-2.jpg");
+      background-size: cover;
+      min-height: 20rem;
+    }
+    &--right {
+      padding: $section-padding-y-md $space-lg;
+
+      @include respond(tab-port) {
+        padding: 0;
+      }
+
+      .book-form {
+        max-width: 40rem;
+
+        @include respond(tab-port) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
