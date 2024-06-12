@@ -16,7 +16,7 @@
     flex: 1 0 50%;
 
     &--left {
-      background-image: url("../../resources/imgs/hero-2.jpg");
+      @include bg-img("hero-2.jpg");
       background-size: cover;
       min-height: 20rem;
     }

@@ -50,13 +50,13 @@
       @include flex-center;
 
       &--1 {
-        @include bg-gradient-img("../../resources/imgs/hero-1.jpg");
+        @include bg-gradient-img("../resources/imgs/hero-1.jpg");
       }
       &--2 {
-        @include bg-gradient-img("../../resources/imgs/hero-2.jpg");
+        @include bg-gradient-img("../resources/imgs/hero-2.jpg");
       }
       &--3 {
-        @include bg-gradient-img("../../resources/imgs/hero-3.jpg");
+        @include bg-gradient-img("../resources/imgs/hero-3.jpg");
       }
     }
     &__dots {

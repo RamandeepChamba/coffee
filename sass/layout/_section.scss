@@ -3,6 +3,6 @@
 }
 
 .section-bg--charcoal {
-  background-image: url("/resources/imgs/charcoal.jpg");
+  @include bg-img("charcoal.jpg");
   background-attachment: fixed;
 }

@@ -85,10 +85,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)
     ),
-    url("/resources/imgs/#{$imageName}");
+    url("../resources/imgs/#{$imageName}");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+@mixin bg-img($imageName) {
+  background-image: url("../resources/imgs/#{$imageName}");
 }
 
 // Padding 0

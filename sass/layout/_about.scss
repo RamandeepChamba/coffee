@@ -24,7 +24,7 @@
       }
 
       &--left {
-        background-image: url("/resources/imgs/coffee-bar.jpg");
+        @include bg-img("coffee-bar.jpg");
 
         @include respond(tab-port) {
           height: 20rem;
