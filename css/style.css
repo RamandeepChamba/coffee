@@ -616,11 +616,13 @@ a:link, a:visited {
     .footer .services a:hover,
     .footer .contact a:hover {
       color: #fafafa; }
-  .footer .contact__item {
+  .footer .contact__item,
+  .footer .contact a {
     display: flex;
     gap: calc(1.25 * 1rem);
     line-height: 1.7; }
-    .footer .contact__item:not(:last-child) {
+    .footer .contact__item:not(:last-child),
+    .footer .contact a:not(:last-child) {
       margin-bottom: calc(1.25 * 1rem); }
 
 .recent__blog-preview {
