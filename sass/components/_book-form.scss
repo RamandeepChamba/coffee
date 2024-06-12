@@ -28,6 +28,10 @@
   &__message {
     flex-grow: 1;
     padding: $space-sm 0;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
   }
 
   &__row {
