@@ -1,0 +1,25 @@
+.menus {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: $space-lg;
+  row-gap: $space-xxl;
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+.menu {
+  flex: 1 0 34%;
+
+  &__heading {
+    font-size: $font-h5;
+    font-weight: 500;
+    color: $color-white;
+    margin-bottom: $space-xl;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-lg;
+  }
+}
