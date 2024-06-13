@@ -1,0 +1,25 @@
+.hero {
+  @include bg-gradient-img("../resources/imgs/coffee-bar.jpg");
+  background-color: $color-black;
+  background-size: cover;
+  min-height: $home-hero-height;
+  @include flex-col-center;
+
+  &__breadcrumb {
+    margin-top: $space-lg;
+    color: $color-grey-dark-1;
+
+    a {
+      &:link,
+      &:visited {
+        color: $color-white;
+      }
+
+      &:hover,
+      &:focus {
+        // color: $color-grey-light-1;
+        text-decoration: underline;
+      }
+    }
+  }
+}

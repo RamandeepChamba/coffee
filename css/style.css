@@ -1118,6 +1118,23 @@ a:link, a:visited {
           .section-contact-end .side--right .book-form {
             max-width: 100%; } }
 
+.hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../resources/imgs/coffee-bar.jpg");
+  background-color: #000;
+  background-size: cover;
+  min-height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .hero__breadcrumb {
+    margin-top: calc(2 * 1rem);
+    color: #7d7d7d; }
+    .hero__breadcrumb a:link, .hero__breadcrumb a:visited {
+      color: #fafafa; }
+    .hero__breadcrumb a:hover, .hero__breadcrumb a:focus {
+      text-decoration: underline; }
+
 .section-hero {
   background-color: #000;
   text-align: center;
