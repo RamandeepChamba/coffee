@@ -762,6 +762,8 @@ a:link, a:visited {
     text-decoration: none; }
     .nav__link:link, .nav__link:visited {
       color: #fafafa; }
+  .nav__link--active:link, .nav__link--active:visited {
+    color: #c49b63; }
   .nav__cart {
     position: relative; }
     .nav__cart::after {
@@ -1080,6 +1082,9 @@ a:link, a:visited {
 
 .section-products .card__item--big.hidden {
   display: none; }
+
+.section-products .card__list {
+  row-gap: calc(3.25 * 1rem); }
 
 .section-products .product-type-tabs {
   margin-top: calc(5.25 * 1rem);

@@ -71,7 +71,7 @@ const aboutSectionObserver = new IntersectionObserver(
     threshold: [0.25],
   }
 );
-aboutSectionObserver.observe(aboutContentEl);
+if (aboutContentEl) aboutSectionObserver.observe(aboutContentEl);
 // Show (opacity, transform) sections as they are scrolled into view
 const manyObserver = new IntersectionObserver(
   function (entries, observer) {

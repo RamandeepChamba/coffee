@@ -3,6 +3,9 @@
     &__item--big.hidden {
       display: none;
     }
+    &__list {
+      row-gap: $space-xl;
+    }
   }
 
   .product-type-tabs {
