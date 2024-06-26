@@ -1,0 +1,60 @@
+.checkout__form {
+  display: flex;
+  gap: $checkout-form-input-gap;
+  flex-wrap: wrap;
+  padding: $space-lg;
+  background-color: $color-black;
+  color: $color-white;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
+  .form-heading {
+    flex: 1 0 100%;
+    margin-bottom: $space-md;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 34%;
+    gap: $space-sm;
+
+    &--full {
+      flex: 1 0 100%;
+    }
+  }
+  .address-inputs {
+    display: flex;
+    gap: $checkout-form-input-gap;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    input {
+      flex: 1;
+    }
+  }
+  .form-radios {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    gap: $space-md;
+    margin-top: $space-md;
+  }
+
+  input,
+  select {
+    padding: $space-md $space-sm;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid $color-grey-dark-3;
+    color: $color-grey-dark-1;
+    font-size: inherit;
+
+    &:focus {
+      border: 1px solid $color-primary;
+    }
+  }
+}

@@ -573,6 +573,52 @@ a:link, a:visited {
     font-size: 0.833rem;
     opacity: 0.7; }
 
+.checkout__form {
+  display: flex;
+  gap: calc(1.25 * 1rem);
+  flex-wrap: wrap;
+  padding: calc(2 * 1rem);
+  background-color: #000;
+  color: #fafafa; }
+  @media only screen and (max-width: 56.25em) {
+    .checkout__form {
+      flex-direction: column; } }
+  .checkout__form .form-heading {
+    flex: 1 0 100%;
+    margin-bottom: calc(1.25 * 1rem); }
+  .checkout__form .form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 34%;
+    gap: calc(0.75 * 1rem); }
+    .checkout__form .form-group--full {
+      flex: 1 0 100%; }
+  .checkout__form .address-inputs {
+    display: flex;
+    gap: calc(1.25 * 1rem); }
+    @media only screen and (max-width: 56.25em) {
+      .checkout__form .address-inputs {
+        flex-direction: column; } }
+    .checkout__form .address-inputs input {
+      flex: 1; }
+  .checkout__form .form-radios {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 100%;
+    gap: calc(1.25 * 1rem);
+    margin-top: calc(1.25 * 1rem); }
+  .checkout__form input,
+  .checkout__form select {
+    padding: calc(1.25 * 1rem) calc(0.75 * 1rem);
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #1e1e1e;
+    color: #7d7d7d;
+    font-size: inherit; }
+    .checkout__form input:focus,
+    .checkout__form select:focus {
+      border: 1px solid #c49b63; }
+
 .container {
   max-width: 70rem;
   margin: 0 auto; }
@@ -847,6 +893,9 @@ a:link, a:visited {
 
 .section {
   padding: 8rem 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .section {
+      padding: 8rem 1rem; } }
 
 .section-bg--charcoal {
   background-image: url("../resources/imgs/charcoal.jpg");

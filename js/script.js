@@ -338,27 +338,29 @@ window.addEventListener("load", function () {
 });
 */
 // METHOD #2
-productTypeTabsEl.addEventListener("click", function (e) {
-  if (!e.target.classList.contains("product-type-tab")) return;
-  const activeTab = productTypeTabsEl.querySelector(".active");
-  // Check if active is the same as before
-  if (activeTab === e.target) return;
-  const type = e.target.dataset.type;
-  // Remove previous active
-  activeTab.classList.remove("active");
-  // Loop over products
-  productsForTabsEls.forEach((productEl) => {
-    // if product of type
-    if (productEl.dataset.type === type) {
-      // show
-      productEl.classList.remove("hidden");
-    }
-    // else
-    else {
-      // hide
-      productEl.classList.add("hidden");
-    }
+if (productTypeTabsEl) {
+  productTypeTabsEl.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("product-type-tab")) return;
+    const activeTab = productTypeTabsEl.querySelector(".active");
+    // Check if active is the same as before
+    if (activeTab === e.target) return;
+    const type = e.target.dataset.type;
+    // Remove previous active
+    activeTab.classList.remove("active");
+    // Loop over products
+    productsForTabsEls.forEach((productEl) => {
+      // if product of type
+      if (productEl.dataset.type === type) {
+        // show
+        productEl.classList.remove("hidden");
+      }
+      // else
+      else {
+        // hide
+        productEl.classList.add("hidden");
+      }
+    });
+    // Make current tab active
+    e.target.classList.add("active");
   });
-  // Make current tab active
-  e.target.classList.add("active");
-});
+}

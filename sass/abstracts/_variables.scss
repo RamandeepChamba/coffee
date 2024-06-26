@@ -22,6 +22,7 @@ $container-md-max-width: 55rem;
 $container-sm-max-width: 40rem;
 
 $section-padding-x: 2rem;
+$section-padding-x-sm: 1rem;
 $section-padding-y-lg: 8rem;
 $section-padding-y-md: 6rem;
 $section-padding-y-sm: 4rem;
@@ -37,3 +38,6 @@ $border-radius-small: 3px;
 
 // Time
 $nav-expand-duration: 0.4s;
+
+// Checkout form
+$checkout-form-input-gap: $space-md;

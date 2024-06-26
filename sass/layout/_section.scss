@@ -1,5 +1,9 @@
 .section {
   padding: $section-padding-y-lg $section-padding-x;
+
+  @include respond(phone) {
+    padding: $section-padding-y-lg $section-padding-x-sm;
+  }
 }
 
 .section-bg--charcoal {

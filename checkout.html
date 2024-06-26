@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="font-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <!-- Navbar -->
+      <nav class="nav">
+        <div class="container nav__container">
+          <div class="nav__head-container">
+            <span class="nav__head">
+              <span class="nav__title">Coffee</span>
+              <span class="nav__sub-title">Blend</span>
+            </span>
+            <span class="nav__toggler">
+              <i class="fa-solid fa-bars"></i>
+              <span>Menu</span>
+            </span>
+          </div>
+          <div class="nav__body nav__body--hidden">
+            <!-- <div class="nav__body"> -->
+            <ul class="nav__links">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Menu</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Services</a>
+              </li>
+              <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#" class="nav__link">Shop</a></li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Contact</a>
+              </li>
+            </ul>
+            <span class="nav__cart"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></span>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <section class="section section-hero">
+        <div class="hero">
+          <h1 class="heading-primary hero__heading">Checkout</h1>
+          <div class="hero__breadcrumb">
+            <span><a href="index.html">Home</a></span> / <span>Checkout</span>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- MAIN -->
+    <main class="main">
+      <section class="section section-checkout section-bg--charcoal">
+        <div class="container">
+          <div class="checkout__container">
+            <div class="checkout__info">
+              <!-- FORM -->
+              <form action="" class="checkout__form">
+                <h2 class="u-ucase form-heading">Billing details</h2>
+                <div class="form-group">
+                  <label for="firstname">First name</label>
+                  <input type="text" name="firstname" id="firstname" />
+                </div>
+                <div class="form-group">
+                  <label for="lastname">Last name</label>
+                  <input type="text" name="lastname" id="lastname" />
+                </div>
+                <div class="form-group form-group--full">
+                  <label for="country">State/Country</label>
+                  <select name="country" id="country">
+                    <option value="india" selected>India</option>
+                    <option value="japan">Japan</option>
+                    <option value="canada">Canada</option>
+                    <option value="china">China</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--full">
+                  <label for="address">Street Address</label>
+                  <div class="address-inputs">
+                    <input
+                      type="text"
+                      name="address1"
+                      id="address"
+                      placeholder="House number and street name"
+                    />
+                    <input
+                      type="text"
+                      name="address2"
+                      placeholder="Appartment, suite, unit etc: (optional)"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="city">Town / City</label>
+                  <input type="text" name="city" id="city" />
+                </div>
+                <div class="form-group">
+                  <label for="zip">Postcode / ZIP</label>
+                  <input type="number" name="zip" id="zip" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" name="phone" id="phone" />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-radios">
+                  <div class="form-radio">
+                    <input
+                      type="radio"
+                      name="checkout-action"
+                      id="create-account"
+                    />
+                    <label for="create-account">Create an account?</label>
+                  </div>
+                  <div class="form-radio">
+                    <input
+                      type="radio"
+                      name="checkout-action"
+                      id="different-address"
+                    />
+                    <label for="different-address"
+                      >Ship to different address</label
+                    >
+                  </div>
+                </div>
+              </form>
+              <div class="price-n-payment">
+                <!-- CART TOTAL -->
+                <div class="checkout__cart-total"></div>
+                <!-- PAYMENT METHOD -->
+                <div class="checkout__payment"></div>
+              </div>
+            </div>
+            <nav class="side-nav">
+              <!-- Search -->
+              <!-- Categories -->
+              <!-- Recent blog -->
+              <!-- tags -->
+              <!-- paragraph -->
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <!-- About -->
+          <div class="about footer__section">
+            <h6 class="footer__heading">About us</h6>
+            <div class="footer__body">
+              <p class="about__text">
+                Far far away, behind the word mountains, far from the countries
+                Vokalia and Consonantia, there live the blind texts.
+              </p>
+              <div class="about__socials">
+                <a href="#" class="about__link slide-into-view">
+                  <span class="about__icon"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></span>
+                </a>
+                <a href="#" class="about__link slide-into-view">
+                  <span class="about__icon"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></span>
+                </a>
+                <a href="#" class="about__link slide-into-view">
+                  <span class="about__icon"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Recent Blog -->
+          <div class="recent footer__section">
+            <h6 class="footer__heading">Recent blog</h6>
+            <div class="footer__body">
+              <div class="recent__blog-preview">
+                <div class="blog__img-container">
+                  <img
+                    src="resources/imgs/coffee_1-sm.jpg"
+                    alt="coffee 1"
+                    class="blog__img"
+                  />
+                </div>
+                <div class="blog__info">
+                  <h6 class="blog__heading">
+                    <a href="#">
+                      Even the all-powerful Pointing has no control about
+                    </a>
+                  </h6>
+                  <div class="blog__meta">
+                    <span class="blog__date">
+                      <i class="fa-solid fa-calendar-days"></i>
+                      <span class="muted"> Sept 15, 2024 </span>
+                    </span>
+                    <span class="blog__author">
+                      <i class="fa-solid fa-user"></i>
+                      <span class="muted"> Admin </span>
+                    </span>
+                    <span class="blog__comments"
+                      ><i class="fa-solid fa-comment"></i>
+                      <span class="muted"> 19 </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="recent__blog-preview">
+                <div class="blog__img-container">
+                  <img
+                    src="resources/imgs/coffee_2-sm.jpg"
+                    alt="coffee 2"
+                    class="blog__img"
+                  />
+                </div>
+                <div class="blog__info">
+                  <h6 class="blog__heading">
+                    <a href="#">
+                      Even the all-powerful Pointing has no control about
+                    </a>
+                  </h6>
+                  <div class="blog__meta">
+                    <span class="blog__date"
+                      ><i class="fa-solid fa-calendar-days"></i>
+                      <span class="muted"> Sept 15, 2024 </span>
+                    </span>
+                    <span class="blog__author"
+                      ><i class="fa-solid fa-user"></i>
+                      <span class="muted"> Admin </span>
+                    </span>
+                    <span class="blog__comments"
+                      ><i class="fa-solid fa-comment"></i>
+                      <span class="muted"> 19 </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Services -->
+          <div class="services footer__section">
+            <h6 class="footer__heading">Services</h6>
+            <div class="footer__body">
+              <ul class="services__list">
+                <li class="services__item">
+                  <a href="#" class="services__link">Cooked</a>
+                </li>
+                <li class="services__item">
+                  <a href="#" class="services__link">Deliver</a>
+                </li>
+                <li class="services__item">
+                  <a href="#" class="services__link">Quality Foods</a>
+                </li>
+                <li class="services__item">
+                  <a href="#" class="services__link">Mixed</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Contact -->
+          <div class="contact footer__section">
+            <h6 class="footer__heading">Have a question?</h6>
+            <div class="footer__body">
+              <div class="contact__item">
+                <span class="contact__icon"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <p class="contact__info">
+                  203 Fake St. Mountain View, San Francisco, California, USA
+                </p>
+              </div>
+              <div class="contact__item">
+                <a href="#">
+                  <span class="contact__icon"
+                    ><i class="fa-solid fa-phone"></i
+                  ></span>
+                  <p class="contact__info">0-589-0000111</p>
+                </a>
+              </div>
+              <div class="contact__item">
+                <a href="#">
+                  <span class="contact__icon"
+                    ><i class="fa-solid fa-envelope"></i
+                  ></span>
+                  <p class="contact__info">info@yourdomain.com</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="copyright">
+          Copyright &copy;2024 This is a reverse engineering of the design from
+          colorlib. Find original design
+          <a href="https://preview.colorlib.com/#coffeeblend">here</a>
+        </p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
