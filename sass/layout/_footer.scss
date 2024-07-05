@@ -67,6 +67,11 @@
       flex: 1 0 34%;
     }
   }
+  .blog-preview-small {
+    &:first-child {
+      margin-bottom: $space-md;
+    }
+  }
   // SERVICES
   .services {
     flex: 0 0 15%;
@@ -116,59 +121,6 @@
         margin-bottom: $space-md;
       }
     }
-  }
-}
-// RECENT BLOG PREVIEW
-.recent__blog-preview {
-  display: flex;
-
-  &:first-child {
-    margin-bottom: $space-md;
-  }
-
-  .blog {
-    &__img-container {
-      width: 7rem;
-      height: 5rem;
-    }
-    &__img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    &__info {
-      margin-left: $space-md;
-    }
-    &__heading {
-      font-size: $font-p;
-      font-weight: 400;
-      margin-bottom: $space-md;
-      color: $color-white;
-
-      a {
-        transition: all 0.2s;
-        &:hover {
-          color: $color-primary;
-        }
-      }
-    }
-    &__meta {
-      display: flex;
-      gap: $space-xs;
-      font-size: $font-sm;
-
-      & > span {
-        display: flex;
-        align-items: center;
-      }
-      i {
-        font-size: 0.8em;
-        margin-right: $space-xxxs;
-      }
-    }
-  }
-  .muted {
-    color: $color-grey-dark-1;
   }
 }
 // COPYRIGHT

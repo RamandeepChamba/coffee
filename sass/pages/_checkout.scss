@@ -8,7 +8,7 @@
     }
   }
   .checkout__info {
-    flex: 1 0 70%;
+    flex: 1 0 68%;
 
     .price-n-payment {
       display: flex;
@@ -33,7 +33,10 @@
     row-gap: $space-xxl;
     color: $color-grey-light-1;
     margin-top: $space-xl;
-    padding: $space-md;
+
+    @include respond(tab-land) {
+      padding: $space-md;
+    }
 
     &__section-heading {
       color: $color-white;
@@ -77,7 +80,7 @@
       justify-content: space-between;
     }
     // RECENT BLOG
-    .recent__blog-preview {
+    .blog-preview-small {
       &:not(:last-child) {
         margin-bottom: $space-md;
       }
