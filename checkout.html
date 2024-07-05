@@ -146,17 +146,230 @@
               </form>
               <div class="price-n-payment">
                 <!-- CART TOTAL -->
-                <div class="checkout__cart-total"></div>
+                <div class="cart__total">
+                  <h2 class="u-ucase cart__heading">Cart Total</h2>
+                  <ul class="cart__items">
+                    <li class="cart__item">
+                      <span class="item__name">Subtotal</span>
+                      <span class="item__price">$20.60</span>
+                    </li>
+                    <li class="cart__item">
+                      <span class="item__name">Delivery</span>
+                      <span class="item__price">$0.00</span>
+                    </li>
+                    <li class="cart__item">
+                      <span class="item__name">Discount</span>
+                      <span class="item__price">$3.00</span>
+                    </li>
+                  </ul>
+                  <div class="cart__total-item">
+                    <span class="total__name u-ucase">Total</span>
+                    <span class="total__price">$17.60</span>
+                  </div>
+                </div>
                 <!-- PAYMENT METHOD -->
-                <div class="checkout__payment"></div>
+                <div class="checkout__payment">
+                  <h2 class="u-ucase payment__heading">Payment Method</h2>
+                  <form action="#" class="payment__form">
+                    <div class="form-group">
+                      <input type="radio" name="payment-method" id="bank" />
+                      <label for="bank">Direct Bank Transfer</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" name="payment-method" id="check" />
+                      <label for="check">Check Payment</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="radio" name="payment-method" id="paypal" />
+                      <label for="paypal">Paypal</label>
+                    </div>
+                    <div class="form-group">
+                      <input type="checkbox" name="terms" id="terms" />
+                      <label for="terms"
+                        >I have read and accept the terms and conditions</label
+                      >
+                    </div>
+                    <button type="submit" class="btn btn--filled">
+                      Place an order
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
             <nav class="side-nav">
               <!-- Search -->
+              <form action="#" class="search-form">
+                <div class="search">
+                  <input type="text" placeholder="Search..." />
+                  <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                  </span>
+                </div>
+              </form>
               <!-- Categories -->
-              <!-- Recent blog -->
+              <div class="side-nav__section">
+                <h6 class="side-nav__section-heading">Categories</h6>
+                <ul class="categories">
+                  <li class="category">
+                    <span class="category__name">Tour</span>
+                    <span class="category__count">(12)</span>
+                  </li>
+                  <li class="category">
+                    <span class="category__name">Hotel</span>
+                    <span class="category__count">(22)</span>
+                  </li>
+                  <li class="category">
+                    <span class="category__name">Coffee</span>
+                    <span class="category__count">(37)</span>
+                  </li>
+                  <li class="category">
+                    <span class="category__name">Drinks</span>
+                    <span class="category__count">(42)</span>
+                  </li>
+                  <li class="category">
+                    <span class="category__name">Food</span>
+                    <span class="category__count">(14)</span>
+                  </li>
+                  <li class="category">
+                    <span class="category__name">Travel</span>
+                    <span class="category__count">(120)</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Recent blogs -->
+              <div class="side-nav__section recent__blogs">
+                <h6 class="side-nav__section-heading">Recent Blogs</h6>
+                <div class="recent__blog-preview">
+                  <div class="blog__img-container">
+                    <img
+                      src="resources/imgs/coffee_1-sm.jpg"
+                      alt="coffee 1"
+                      class="blog__img"
+                    />
+                  </div>
+                  <div class="blog__info">
+                    <h6 class="blog__heading">
+                      <a href="#">
+                        Even the all-powerful Pointing has no control about
+                      </a>
+                    </h6>
+                    <div class="blog__meta">
+                      <span class="blog__date">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="muted"> Sept 15, 2024 </span>
+                      </span>
+                      <span class="blog__author">
+                        <i class="fa-solid fa-user"></i>
+                        <span class="muted"> Admin </span>
+                      </span>
+                      <span class="blog__comments"
+                        ><i class="fa-solid fa-comment"></i>
+                        <span class="muted"> 19 </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent__blog-preview">
+                  <div class="blog__img-container">
+                    <img
+                      src="resources/imgs/coffee_2-sm.jpg"
+                      alt="coffee 2"
+                      class="blog__img"
+                    />
+                  </div>
+                  <div class="blog__info">
+                    <h6 class="blog__heading">
+                      <a href="#">
+                        Even the all-powerful Pointing has no control about
+                      </a>
+                    </h6>
+                    <div class="blog__meta">
+                      <span class="blog__date"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        <span class="muted"> Sept 15, 2024 </span>
+                      </span>
+                      <span class="blog__author"
+                        ><i class="fa-solid fa-user"></i>
+                        <span class="muted"> Admin </span>
+                      </span>
+                      <span class="blog__comments"
+                        ><i class="fa-solid fa-comment"></i>
+                        <span class="muted"> 19 </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="recent__blog-preview">
+                  <div class="blog__img-container">
+                    <img
+                      src="resources/imgs/coffee_3-sm.jpg"
+                      alt="coffee 2"
+                      class="blog__img"
+                    />
+                  </div>
+                  <div class="blog__info">
+                    <h6 class="blog__heading">
+                      <a href="#">
+                        Even the all-powerful Pointing has no control about
+                      </a>
+                    </h6>
+                    <div class="blog__meta">
+                      <span class="blog__date"
+                        ><i class="fa-solid fa-calendar-days"></i>
+                        <span class="muted"> Sept 15, 2024 </span>
+                      </span>
+                      <span class="blog__author"
+                        ><i class="fa-solid fa-user"></i>
+                        <span class="muted"> Admin </span>
+                      </span>
+                      <span class="blog__comments"
+                        ><i class="fa-solid fa-comment"></i>
+                        <span class="muted"> 19 </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- tags -->
+              <div class="side-nav__section">
+                <h6 class="side-nav__section-heading">Tag Cloud</h6>
+                <ul class="tags-list">
+                  <li>
+                    <a href="#" class="tag">Dish</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag"> Menu </a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Food</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Sweet</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Tasty</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Delicious</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Dessert</a>
+                  </li>
+                  <li>
+                    <a href="#" class="tag">Drinks</a>
+                  </li>
+                </ul>
+              </div>
               <!-- paragraph -->
+              <div class="side-nav__section paragraph">
+                <h6 class="side-nav__section-heading">Paragraph</h6>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Ducimus itaque, autem necessitatibus voluptate quod mollitia
+                  delectus aut, sunt placeat nam vero culpa sapiente consectetur
+                  similique, inventore eos fugit cupiditate numquam!
+                </p>
+              </div>
             </nav>
           </div>
         </div>

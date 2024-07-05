@@ -1,0 +1,14 @@
+.tag {
+  display: inline-block;
+  padding: $space-xs $space-sm;
+  border-radius: 5px;
+  border: 1px solid $color-primary-dark;
+  text-transform: uppercase;
+  font-size: $font-xs;
+  transition: all 0.2s;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-black;
+  }
+}

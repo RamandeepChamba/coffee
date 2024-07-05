@@ -3,6 +3,10 @@
   color: $color-grey-light-1;
   padding: $section-padding-y-lg $section-padding-x;
 
+  @include respond(phone) {
+    padding: $section-padding-y-lg $section-padding-x-sm;
+  }
+
   // CONTENT
   &__content {
     display: flex;

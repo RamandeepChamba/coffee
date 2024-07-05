@@ -1,0 +1,35 @@
+.cart__total {
+  background-color: $color-black;
+  color: $color-grey-light-1;
+  padding: $space-md;
+
+  .cart {
+    &__heading {
+      color: $color-white;
+      margin-bottom: $space-lg;
+    }
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+      list-style: none;
+    }
+    &__item,
+    &__total-item {
+      display: flex;
+
+      span {
+        flex: 1;
+      }
+    }
+    &__total-item {
+      margin-top: $space-md;
+      padding-top: $space-md;
+      border-top: 1px solid $color-grey-dark-3;
+    }
+  }
+
+  .total__price {
+    color: $color-primary;
+  }
+}

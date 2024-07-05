@@ -23,6 +23,9 @@
 @import "components/section-header-with-info";
 @import "components/testimonial";
 @import "components/checkout-form";
+@import "components/cart-total";
+@import "components/payment";
+@import "components/tag";
 
 @import "layout/container";
 @import "layout/footer";
@@ -44,3 +47,4 @@
 
 @import "pages/home";
 @import "pages/menu";
+@import "pages/checkout";

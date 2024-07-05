@@ -1,0 +1,27 @@
+.checkout__payment {
+  background-color: $color-black;
+  color: $color-grey-light-1;
+  padding: $space-md;
+  padding-bottom: $space-xl;
+
+  .payment {
+    &__heading {
+      color: $color-white;
+      margin-bottom: $space-lg;
+    }
+    &__form {
+      display: flex;
+      flex-direction: column;
+      row-gap: $space-md;
+    }
+  }
+  .form-group {
+    margin-left: $space-sm;
+    color: $color-grey-dark-1;
+
+    label {
+      margin-left: $space-xs;
+      line-height: 1.7;
+    }
+  }
+}
