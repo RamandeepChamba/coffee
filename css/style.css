@@ -1447,7 +1447,7 @@ a:link, a:visited {
   display: flex;
   flex-direction: column;
   row-gap: calc(3.25 * 1rem);
-  flex: 1 0 30%; }
+  flex: 0 1 30%; }
   @media only screen and (max-width: 56.25em) {
     .contact-page .contact__info {
       flex: 1; } }
@@ -1465,12 +1465,13 @@ a:link, a:visited {
   display: flex;
   flex-wrap: wrap;
   gap: calc(1.25 * 1rem);
-  flex: 1 0 70%;
-  padding-right: 10rem; }
+  flex: 1;
+  padding-right: 5rem; }
+  @media only screen and (max-width: 75em) {
+    .contact-page .contact__form {
+      padding-right: 0; } }
   @media only screen and (max-width: 56.25em) {
     .contact-page .contact__form {
-      flex: 1;
-      padding-right: 0;
       flex-direction: column; } }
   .contact-page .contact__form input,
   .contact-page .contact__form textarea {
