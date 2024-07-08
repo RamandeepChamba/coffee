@@ -1,0 +1,88 @@
+.contact-page {
+  .contact {
+    &__container {
+      display: flex;
+      color: $color-grey-light-3;
+      gap: $space-xxl;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        gap: $space-xl;
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      row-gap: $space-xl;
+      flex: 1 0 30%;
+
+      @include respond(tab-port) {
+        flex: 1;
+      }
+    }
+    &__info-heading {
+      font-size: $font-h5;
+    }
+    &__item {
+      .muted {
+        color: $color-grey-dark-1;
+      }
+      a {
+        &:link,
+        &:visited {
+          color: $color-primary;
+        }
+      }
+    }
+    &__form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $space-md;
+      flex: 1 0 70%;
+      padding-right: 10rem;
+
+      @include respond(tab-port) {
+        flex: 1;
+        padding-right: 0;
+        flex-direction: column;
+      }
+
+      input,
+      textarea {
+        padding: $space-md 0;
+        background-color: transparent;
+
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $color-grey-dark-1;
+        color: inherit;
+        font-size: inherit;
+
+        transition: all 0.2s;
+
+        &:focus {
+          border-bottom: 1px solid $color-primary;
+        }
+      }
+
+      input {
+        flex: 1 0 34%;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+        }
+      }
+      .input--full,
+      textarea {
+        flex: 1 0 100%;
+
+        @include respond(tab-port) {
+          flex-direction: column;
+        }
+      }
+      button {
+        align-self: flex-start;
+      }
+    }
+  }
+}

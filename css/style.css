@@ -1433,3 +1433,69 @@ a:link, a:visited {
     gap: calc(0.5 * 1rem); }
   .section-checkout .side-nav .paragraph {
     line-height: 1.7; }
+
+.contact-page .contact__container {
+  display: flex;
+  color: #e1e1e1;
+  gap: calc(5.25 * 1rem); }
+  @media only screen and (max-width: 56.25em) {
+    .contact-page .contact__container {
+      flex-direction: column;
+      gap: calc(3.25 * 1rem); } }
+
+.contact-page .contact__info {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(3.25 * 1rem);
+  flex: 1 0 30%; }
+  @media only screen and (max-width: 56.25em) {
+    .contact-page .contact__info {
+      flex: 1; } }
+
+.contact-page .contact__info-heading {
+  font-size: 1.44rem; }
+
+.contact-page .contact__item .muted {
+  color: #7d7d7d; }
+
+.contact-page .contact__item a:link, .contact-page .contact__item a:visited {
+  color: #c49b63; }
+
+.contact-page .contact__form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(1.25 * 1rem);
+  flex: 1 0 70%;
+  padding-right: 10rem; }
+  @media only screen and (max-width: 56.25em) {
+    .contact-page .contact__form {
+      flex: 1;
+      padding-right: 0;
+      flex-direction: column; } }
+  .contact-page .contact__form input,
+  .contact-page .contact__form textarea {
+    padding: calc(1.25 * 1rem) 0;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #7d7d7d;
+    color: inherit;
+    font-size: inherit;
+    transition: all 0.2s; }
+    .contact-page .contact__form input:focus,
+    .contact-page .contact__form textarea:focus {
+      border-bottom: 1px solid #c49b63; }
+  .contact-page .contact__form input {
+    flex: 1 0 34%; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-page .contact__form input {
+        flex-direction: column; } }
+  .contact-page .contact__form .input--full,
+  .contact-page .contact__form textarea {
+    flex: 1 0 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-page .contact__form .input--full,
+      .contact-page .contact__form textarea {
+        flex-direction: column; } }
+  .contact-page .contact__form button {
+    align-self: flex-start; }
