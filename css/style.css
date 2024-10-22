@@ -826,7 +826,6 @@ a:link, a:visited {
   max-height: 6rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  overflow: hidden;
   transform: translateY(0);
   transition: max-height 0.4s ease, transform 0.4s; }
   .nav__toggler {
@@ -837,9 +836,11 @@ a:link, a:visited {
     display: flex;
     justify-content: space-between;
     color: #fafafa;
-    padding: 2rem 0;
-    align-items: center;
     text-transform: uppercase; }
+  .nav__head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   .nav__head {
     display: flex;
     flex-direction: column;
@@ -852,25 +853,55 @@ a:link, a:visited {
     font-size: 0.833rem;
     letter-spacing: 6px; }
   .nav__body {
-    display: flex;
-    align-items: center; }
+    display: flex; }
   .nav__links {
     list-style: none;
     display: flex;
     flex-direction: row;
     font-size: 0.833rem;
     letter-spacing: 1.5px; }
-  .nav__item {
-    margin-right: calc(3.25 * 1rem); }
-    @media only screen and (max-width: 75em) {
-      .nav__item {
-        margin-right: calc(2 * 1rem); } }
+  .nav__item-with-sub-menu {
+    cursor: pointer;
+    position: relative; }
+    .nav__item-with-sub-menu:hover ul {
+      display: flex; }
+  .nav__link, .nav__sub-menu-toggler {
+    padding: 2rem 1rem;
+    transition: all 0.2s; }
   .nav__link {
     text-decoration: none; }
     .nav__link:link, .nav__link:visited {
       color: #fafafa; }
+  .nav__link:hover {
+    color: #c49b63; }
+  .nav__sub-menu-toggler:hover {
+    color: #c49b63; }
   .nav__link--active:link, .nav__link--active:visited {
     color: #c49b63; }
+  .nav__item, .nav__cart {
+    display: flex;
+    align-items: center; }
+  .nav__sub-menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: #0a0a0a;
+    color: #aeaeae;
+    padding: 0.5rem 0;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem; }
+    .nav__sub-menu li {
+      background-color: #323232; }
+      .nav__sub-menu li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s; }
+        .nav__sub-menu li a:hover {
+          color: #fafafa; }
   .nav__cart {
     position: relative; }
     .nav__cart::after {
@@ -879,8 +910,8 @@ a:link, a:visited {
       justify-content: center;
       align-items: center;
       position: absolute;
-      top: -80%;
-      left: 80%;
+      top: -0.8rem;
+      left: 0.6rem;
       height: 1.4rem;
       width: 1.4rem;
       background-color: #ffd43b;
@@ -888,7 +919,7 @@ a:link, a:visited {
       border-radius: 50%;
       font-size: 0.694rem; }
   .nav--expanded {
-    max-height: 38rem; }
+    max-height: 40rem; }
   .nav--sticky {
     position: fixed;
     top: 0;
@@ -902,7 +933,9 @@ a:link, a:visited {
 @media (max-width: 900px) {
   .nav {
     background-color: #765d3b;
-    border-bottom: none; }
+    border-bottom: none;
+    max-height: 4.5rem;
+    overflow: hidden; }
     .nav__container {
       flex-direction: column;
       align-items: flex-start;
@@ -911,7 +944,8 @@ a:link, a:visited {
       width: 100%;
       display: flex;
       justify-content: space-between;
-      align-items: center; }
+      align-items: center;
+      padding: 1rem 0; }
     .nav__toggler {
       display: flex; }
       .nav__toggler [class^="fa-"] {
@@ -921,16 +955,27 @@ a:link, a:visited {
     .nav__body {
       flex-direction: column;
       align-items: flex-start;
-      margin-top: calc(2 * 1rem);
       width: 100%;
       visibility: visible; }
       .nav__body--hidden {
         animation: hideBody 0.1s ease 0.4s 1 normal forwards; }
     .nav__links {
-      flex-direction: column; }
+      flex-direction: column;
+      width: 100%; }
+    .nav__link, .nav__sub-menu-toggler {
+      width: 100%;
+      padding: 1rem 0; }
+    .nav__item, .nav__cart {
+      align-items: flex-start;
+      padding: 0; }
     .nav__item {
-      margin-right: 0;
-      margin-bottom: calc(3.25 * 1rem); }
+      margin-right: 0; }
+    .nav__item-with-sub-menu {
+      display: flex;
+      flex-direction: column; }
+      .nav__item-with-sub-menu ul {
+        position: relative;
+        width: 100%; }
     .nav__cart {
       width: 100%; }
       .nav__cart::after {
@@ -938,6 +983,8 @@ a:link, a:visited {
         left: 50%;
         transform: translate(-50%, -50%);
         left: 100%; }
+    .nav--expanded {
+      max-height: 40rem; }
     .nav--sticky {
       position: fixed;
       top: 0;

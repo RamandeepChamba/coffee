@@ -11,7 +11,7 @@
   max-height: $navInitMaxHeight;
   padding-left: $section-padding-x;
   padding-right: $section-padding-x;
-  overflow: hidden;
+  // overflow: hidden;
   transform: translateY(0);
   transition: max-height $nav-expand-duration ease, transform 0.4s;
 
@@ -26,12 +26,17 @@
     justify-content: space-between;
     color: $color-white;
     // padding: 2rem $section-padding-x;
-    padding: 2rem 0;
+    // padding: 2rem 0;
     // padding: $space-md 0;
-    align-items: center;
+    // align-items: center;
     text-transform: uppercase;
   }
 
+  &__head-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   &__head {
     display: flex;
     flex-direction: column;
@@ -48,7 +53,7 @@
   }
   &__body {
     display: flex;
-    align-items: center;
+    // align-items: center;
   }
   &__links {
     list-style: none;
@@ -58,11 +63,27 @@
     letter-spacing: 1.5px;
   }
   &__item {
-    margin-right: $space-xl;
+    // margin-right: $space-xl;
+    // background-color: yellow;
 
     @include respond(tab-land) {
-      margin-right: $space-lg;
+      // margin-right: $space-lg;
     }
+  }
+  &__item-with-sub-menu {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      ul {
+        display: flex;
+      }
+    }
+  }
+  &__link,
+  &__sub-menu-toggler {
+    padding: 2rem 1rem;
+    transition: all 0.2s;
   }
   &__link {
     text-decoration: none;
@@ -72,20 +93,60 @@
       color: $color-white;
     }
   }
+  &__link:hover {
+    color: $color-primary;
+  }
+  &__sub-menu-toggler:hover {
+    color: $color-primary;
+  }
   &__link--active {
     &:link,
     &:visited {
       color: $color-primary;
     }
   }
+  &__item,
+  &__cart {
+    display: flex;
+    align-items: center;
+    // padding: 2rem 0;
+  }
+  &__sub-menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: $color-grey-dark-4;
+    color: $color-grey-light-1;
+    padding: 0.5rem 0;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 10rem;
+
+    li {
+      background-color: $color-grey-dark-2;
+
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s;
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
   &__cart {
     position: relative;
+
     &::after {
       content: "1";
       @include flex-center;
       position: absolute;
-      top: -80%;
-      left: 80%;
+      top: -0.8rem;
+      left: 0.6rem;
       height: 1.4rem;
       width: 1.4rem;
       background-color: $color-highlight;
@@ -118,6 +179,9 @@
     // position: absolute;
     background-color: $color-primary-dark;
     border-bottom: none;
+    max-height: 4.5rem;
+
+    overflow: hidden;
 
     // nav toggle
     &__container {
@@ -131,6 +195,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 1rem 0;
     }
     &__toggler {
       display: flex;
@@ -144,7 +209,6 @@
     &__body {
       flex-direction: column;
       align-items: flex-start;
-      margin-top: $space-lg;
       width: 100%;
       // transition: all 0.4s ease;
 
@@ -155,15 +219,33 @@
         // display: none;
         // @include hide-soft;
         animation: hideBody 0.1s ease $nav-expand-duration 1 normal forwards;
-        // margin-top: 0;
       }
     }
     &__links {
       flex-direction: column;
+      width: 100%;
+    }
+    &__link,
+    &__sub-menu-toggler {
+      width: 100%;
+      padding: 1rem 0;
+    }
+    &__item,
+    &__cart {
+      align-items: flex-start;
+      padding: 0;
+      // margin-bottom: $space-lg;
     }
     &__item {
       margin-right: 0;
-      margin-bottom: $space-xl;
+    }
+    &__item-with-sub-menu {
+      display: flex;
+      flex-direction: column;
+      ul {
+        position: relative;
+        width: 100%;
+      }
     }
     &__cart {
       width: 100%;
@@ -172,6 +254,9 @@
         @include absolute-transform-center;
         left: 100%;
       }
+    }
+    &--expanded {
+      max-height: $navExpandMaxHeight;
     }
     &--sticky {
       position: fixed;
